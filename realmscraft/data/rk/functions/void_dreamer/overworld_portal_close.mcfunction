@@ -1,0 +1,3 @@
+execute if score @e[tag=OverworldState] matches 4 run execute at @e[tag=OverworldPortal] run fill ~1 ~ ~ ~-1 ~2 ~ minecraft:air
+execute if score @e[tag=OverworldState] matches 4 run scoreboard players set @e[tag=OverworldState] value 5
+execute if score @e[tag=OverworldState] matches 4 run execute at @e[tag=OverworldSpawn,type=armor_stand,limit=10,sort=random] run summon magma_cube ~ ~ ~ {Size:2,Tags:["BossSlime"]}
