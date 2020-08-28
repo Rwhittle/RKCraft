@@ -1,14 +1,40 @@
-: title=Marshal Commands; author=Aaron; spacing = 2
+: title=Marshal Commands v1.3; author=Aaron; spacing = 2
 "General Marshal Commands"
 "Toggle On Marshal Mode" /function rk:quest/marshal_mode
 "Teleport PCs to me" /teleport @a[gamemode=adventure] @s
 "Teleport PCs to tavern" /teleport @a[gamemode=adventure] @e[type=armor_stand,limit=1,name=Tavern]
+: pagebreak
+"Tavern Barrier On" /function rk:quest/tavern_barrier_on
+"Tavern Barrier Off" /function rk:quest/tavern_barrier_off
+"Tavern Wall Up" /function rk:quest/tavern_wall_up
+"Tavern Wall Down" /function rk:quest/tavern_wall_down
+: pagebreak
+
+"Mob Spawn: Random Desert Spawn Point"
+"Wolf" /execute at @e[type=minecraft:armor_stand,tag=wolf,tag=desert,sort=random,limit=1] run summon minecraft:wolf ~ ~ ~ {Tags:[spawn_gi-ant],ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+"Bear" /execute at @e[type=minecraft:armor_stand,tag=bear,tag=desert,sort=random,limit=1] run summon minecraft:polar_bear ~ ~ ~ {Tags:[spawn_gi-ant],ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+: pagebreak
+
+"Mob Spawn: Closest Spawn Point"
+"Wolf" /execute at @e[type=minecraft:armor_stand,tag=wolf,sort=nearest,limit=1] run summon minecraft:wolf ~ ~ ~ {Tags:[spawn_gi-ant],ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+"Bear" /execute at @e[type=minecraft:armor_stand,tag=bear,sort=nearest,limit=1] run summon minecraft:polar_bear ~ ~ ~ {Tags:[spawn_gi-ant],ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+"Spider" /execute at @e[type=minecraft:armor_stand,tag=spider,sort=nearest,limit=1] run summon minecraft:spider ~ ~ ~ {Tags:[spawn_gi-ant],ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+"Slime" /execute at @e[type=minecraft:armor_stand,tag=slime,sort=nearest,limit=1] run summon minecraft:magma_cube ~ ~ ~ {PersistenceRequired:1b,ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+: pagebreak
+
+"Mob Spawn: Nearby(<=20), Random Spawn Point"
+"Wolf" /execute at @e[type=minecraft:armor_stand,tag=wolf,distance=..20,sort=random,limit=1] run summon minecraft:wolf ~ ~ ~ {Tags:[spawn_gi-ant],ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+"Bear" /execute at @e[type=minecraft:armor_stand,tag=bear,distance=..20,sort=random,limit=1] run summon minecraft:polar_bear ~ ~ ~ {Tags:[spawn_gi-ant],ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+"Spider" /execute at @e[type=minecraft:armor_stand,tag=spider,distance=..20,sort=random,limit=1] run summon minecraft:spider ~ ~ ~ {Tags:[spawn_gi-ant],ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
+"Slime" /execute at @e[type=minecraft:armor_stand,tag=slime,distance=..20,sort=random,limit=1] run summon minecraft:magma_cube ~ ~ ~ {PersistenceRequired:1b,ActiveEffects:[{Id:28b,Amplifier:1b,Duration:100,ShowParticles:0b}]}
 : pagebreak
 
 "Mob Summoning"
 "Summon Gi-ant Wolf" /summon minecraft:wolf ~ ~ ~ {Tags:[spawn_gi-ant]}
 "Summon Gi-ant Bear" /summon minecraft:polar_bear ~ ~ ~ {Tags:[spawn_gi-ant]}
 "Summon Gi-ant Spider" /summon minecraft:spider ~ ~ ~ {Tags:[spawn_gi-ant]}
+"Summon Slime" /summon minecraft:magma_cube ~ ~ ~ {PersistenceRequired:1b}
+: pagebreak
 "Summon Fox" /summon minecraft:fox ~ ~ ~
 "Summon Rabbit" /summon minecraft:rabbit ~ ~ ~
 "Summon Cod" /summon minecraft:cod ~ ~ ~
@@ -20,6 +46,7 @@
 "Generate quest TNT" /function rk:quest/gen_tnt
 "Generate quest flint and steel" /function rk:quest/gen_flint_and_steel
 : pagebreak
+"Jack: Open Gi Portal" /setblock 9878 113 10001 redstone_block
 "Complete Ritual and appear to PCs" /function rk:quest/ritual_completetion
 : pagebreak
 
@@ -69,3 +96,8 @@
 "Instant Health" /effect give @a[gamemode=adventure] minecraft:instant_health 60
 "Levitation" /effect give @a[gamemode=adventure] minecraft:levitation 60
 "Haste" /effect give @a[gamemode=adventure] minecraft:haste 60
+: pagebreak
+
+"Book Commands"
+"Get latest Marshal Book" /function rk:quest/gen_marshal_book
+"Get latest Linking Book" /function rk:quest/gen_linking_book
