@@ -10,3 +10,5 @@ scoreboard players set @s regenerateTime 0
 scoreboard players set @s following 0
 scoreboard players set @s beckoned 0
 scoreboard players set @s cooldownLight 21
+#RK Specific
+scoreboard players set @s wipeBlood 0

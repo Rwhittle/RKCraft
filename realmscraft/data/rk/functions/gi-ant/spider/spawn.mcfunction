@@ -14,3 +14,6 @@ scoreboard players set @s mobDeathTrigger 90
 attribute @s minecraft:generic.max_health base set 150
 data merge entity @s {Health:100}
 execute as @s store result score @s mobHealth run data get entity @s Health
+
+#Persist Forever
+data merge entity @s {PersistenceRequired:1b}
