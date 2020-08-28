@@ -12,7 +12,9 @@
 # fancier text, make a separate file that imports this one and
 # instantiates or subclasses Book.
 
+import json
 import sys
+from util import mc_json
 
 
 FIRST_PAGE_MAX_LINKS = 5
@@ -27,7 +29,8 @@ class Book(object):
 
   def __init__(self, title):
     self.title = title
-    self.content = []
+    self.pages = [[]]
+    self.bookdata = None
     self.page = 0
     self.links = 0
 
@@ -35,6 +38,9 @@ class Book(object):
     self.author = "commandbook.py"
 
   def parse_config(self, line):
+    if line.strip().startswith("pagebreak"):
+      self.new_page()
+      return
     for assignment in line.split(";"):
       key, value = assignment.split("=")
       key = key.strip()
@@ -47,30 +53,62 @@ class Book(object):
         self.spaces = int(value)
 
   def preamble(self):
-    spacing = r" \\u0020" * int(self.spaces / 2)
+    return r"/give @p written_book"
+
+  def make_title(self):
+    spacing = r" \u0020" * int(self.spaces / 2)
     if self.spaces % 2 == 1:
       spacing += " "
-    return r"""/give @p written_book{pages:['["",{"text":"%s"},{"text":"%s\\n\\n","underlined":true},""" % (spacing, self.title)
-    
-  def clear_color(self):
-    self.content.append(r"""{"text":"\\n\\n","color":"reset"},""")
+    return [{"text":r"%s" % spacing},
+            {"text":r"%s\n\n" % self.title, "underlined":True}]
 
-  def add_link(self, text, command, color="blue"):
-    self.content.append(r"""{"text":"%s","underlined":true,"color":"%s","clickEvent":{"action":"run_command","value":"%s"}},""" % (text, color, escape(command)))
-    self.clear_color()
-    self.links += 1
+  def new_page(self):
+    self.page += 1
+    self.pages.append([{"text": ""}])
+    self.links = 0
+
+  def maybe_new_page(self):
     if ((self.page == 0 and self.links == FIRST_PAGE_MAX_LINKS)
-        or (self.links - FIRST_PAGE_MAX_LINKS) % LATER_PAGE_MAX_LINKS == 0):
-      self.page += 1
-      self.content[-1] = self.content[-1][:-1] # Strip off final trailing comma
-      self.content.append(r"""]','[""")
+        or self.links == LATER_PAGE_MAX_LINKS):
+      self.new_page()
+
+    
+  def reset_color(self):
+    self.pages[-1] += [{"text": "\\n\\n",
+                        "color": "reset"}]
+
+  def add_text(self, text, color=None):
+    if not color:
+      color = "black"
+    self.pages[-1].append({"text": text,
+                           "underlined": False,
+                           "color": color})
+    self.reset_color()
+    self.links += 1
+
+  def add_link(self, text, command, color=None):
+    if not color:
+      color = "blue"
+    self.pages[-1].append({"text": text,
+                           "underlined": True,
+                           "color": color,
+                           "clickEvent": {
+                             "action": "run_command",
+                             "value": command
+                           }})
+    self.reset_color()
+    self.links += 1
   
   def generate(self):
-    data = self.content[:]
-    data = [self.preamble()] + data
-    data[-1] = data[-1][:-1] # Strip off final trailing comma
-    data.append(r"""]'],title:"%s",author:"%s"}""" % (self.title, self.author))
-    return "".join(data)
+    pages = self.pages[:]
+    pages[0] = self.make_title() + pages[0]
+    data = {
+      "title": (self.title,),
+      "author": (self.author,),
+      "pages": [(json.dumps(page).replace("'", r"\'"),) for page in self.pages],
+      "CustomModelData": 1
+    }
+    return self.preamble() + mc_json(data)
 
 
 def commandbook(filename):
@@ -82,10 +120,16 @@ def commandbook(filename):
         book.parse_config(line[1:])
         continue
       try:
+        book.maybe_new_page()
         comment, text, command = line.split('"', 2)
+
+        color = None
         if comment.startswith("color"):
-          book.add_link(text, command.strip(), comment.split(" ")[0].split("color")[1])
-        book.add_link(text, command.strip())
+          color = comment.split(" ")[0].split("color")[1]
+        if command.strip():
+          book.add_link(text, command.strip(), color)
+        else:
+          book.add_text(text, color)
       except ValueError:
         if line.strip():
           sys.stderr.write("Warning: couldn't parse line %d: '%s'\n" % (i + 1, line.strip()))
