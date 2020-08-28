@@ -8,7 +8,8 @@ scoreboard players add @s raycast 1
 #particle barrier ~ ~ ~ 0 0 0 0.1 1
 
 #check for desired entity
-execute if entity @e[distance=..1,type=zombie,scores={deathLine=1..}] run scoreboard players set @s raycast 999999
+#RK Specific: Exclude bloodied corpses
+execute if entity @e[distance=..1,type=zombie,scores={deathLine=1..},tag=!bloodied] run scoreboard players set @s raycast 999999
 
 #spell effects
 execute as @s[scores={raycast=1000..}] positioned ^ ^ ^ run tag @e[limit=1,sort=nearest,type=zombie,scores={deathLine=1..}] add revive

@@ -4,4 +4,6 @@
 
 #give the players corpse a regeration timer
 scoreboard players set @e[type=zombie,x=1,y=1,z=2,distance=..2] regenerateTime 2400
+#RK Specific: Extend bloodied regen timer
+scoreboard players add @e[type=zombie,x=1,y=1,z=2,distance=..2,tag=bloodied] regenerateTime 300
 tag @e[type=zombie,x=1,y=1,z=2,distance=..2] add regenerate
