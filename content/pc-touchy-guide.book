@@ -1,0 +1,42 @@
+: title=OOC Notes; author=Staff
+"      OOC Notes"
+"Table of Contents"
+colorblack "1) Proximity Voice Chat" /:page 2
+colorblack "2) Death" /:page 5
+colorblack "3) Bloodied mechanic" /:page 8
+
+"This event uses Proximity Voice Chat, so that you can only hear people who are nearby. The tool is called Minecord."
+"To Set Up Proximity Voice Chat:"
+"1) Click here to get your link code." /minecord link
+: pagebreak
+"2) Send the 4-digit link code to the Vox Craftus bot on the RealmsCraft Discord server."
+"(it might tell you the code both did and didn't work, don't worry)"
+"3) Join the Lobby of Connectedness voice channel on..."
+: pagebreak
+"...the RealmsCraft Discord server."
+"4) Click here to turn Proximity Voice Chat on" /minecord toggle
+"5) To turn this back off, click on step 4 again or leave the voice channel in Discord. That's all!"
+
+: pagebreak
+
+"  Death Mechanics"
+
+"When you die, you leave behind a mottled corpse. Corpses can be healed with spells like Raise Dead, Seed of Life, etc. As usual, be mindful of your party's access to healing!"
+
+:pagebreak
+
+"If a living player walks next to a corpse, it will stand up. To drag a corpse, switch to an empty hotbar slot and right click the body and it will follow you. To stop dragging, right click again and you will drop the body."
+
+:pagebreak
+
+"If you move far enough away from a body you are dragging (by running, jumping, falling, etc.), you will drop it."
+
+: pagebreak
+
+"  Bloodied Mechanic"
+"When you are Bloodied, you will see red particles falling off your body. Healing spells will not work on you."
+"You can remove the Bloodied tag by holding the Shift key (crouching) for 10 seconds"
+: pagebreak
+"(simulating wiping the blood off)."
+"If you attack or take damage while crouching, you will be interrupted."
+"Being bloodied also wears off while dead."

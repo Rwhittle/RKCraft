@@ -89,13 +89,20 @@ class Book(object):
   def add_link(self, text, command, color=None):
     if not color:
       color = "blue"
+    if command.startswith("/:page"):
+      click_event = {
+        "action": "change_page",
+        "value": command.split("page")[1].strip()
+      }
+    else:
+      click_event = {
+        "action": "run_command",
+        "value": command
+      }
     self.pages[-1].append({"text": text,
                            "underlined": True,
                            "color": color,
-                           "clickEvent": {
-                             "action": "run_command",
-                             "value": command
-                           }})
+                           "clickEvent": click_event})
     self.reset_color()
     self.links += 1
   
