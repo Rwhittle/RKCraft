@@ -1,8 +1,38 @@
 : title=Ability Selection; author=Staff; linkcolor=black; doublespaced=False; autobreak=False
 
-"I want to be a..."
-"  %{Fighter(/function beFighter)}% %{Skirmisher(/function beSkirmisher)}% %{Spellcaster(/function beSpellcaster)}%"
+"    Ability Selection"
+""
+"This book will let you choose your %{character class(/:page class)}%, %{equipment(/:page equipment)}%, and %{spells(/:page spells)}% (if applicable)."
+""
+"If you need to find out what these mean, read the %{RealmsCraft Omnibus(/function rk:quest/gen_omnibus)}% for details."
 
+: pagebreak
+
+$class "    Class"
+""
+"I want to be a..."
+"  Fighter" /function beFighter
+"  Skirmisher" /function beSkirmisher
+"  Spellcaster" /function beSpellcaster
+
+: pagebreak
+
+$equipment "    Equipment"
+""
 "I want to use a(n)..."
-"  %{Sword(/function useSword)}% %{Axe(/function useAxe)}%"
-"%{Shield Only(/function useShield)}%"
+"  Sword" /function useSword
+"  Axe"  /function useAxe
+"  Shield Only" /function useShield
+
+: pagebreak
+
+$spells "      Spells"
+""
+"I want to learn..."
+""
+"  Support %{One(/chooseSupport1)}% | %{Two(/chooseSupport2)}%"
+""
+"  Mage %{One(/chooseMage1)}% | %{Two(/chooseMage2)}%"
+""
+"  Seer %{One(/chooseSeer1)}% | %{Two(/chooseSeer2)}%"
+""
