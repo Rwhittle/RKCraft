@@ -21,21 +21,25 @@ $class "    Class"
 
 $equipment "    Equipment"
 ""
-"I want to use a(n)..."
-"  Sword" /function useSword
-"  Axe"  /function useAxe
-"  Shield Only" /function useShield
+"I want to have a(n)..."
+"  Sword" /function chooseSword
+"  Axe"  /function chooseAxe
+"  Shield Only" /function chooseShield
 
 : pagebreak
 
 $spells "      Spells"
 ""
+"Skirmishers get a Level One choice. Spellcasters get a Level Two choice OR two Level One choices. (Don't click a One if you're a spellcaster and want Level Two of that Path!)"
+""
+"Pick spells on next page."
+: pagebreak
 "I want to learn..."
 ""
-"  Support %{One(/chooseSupport1)}% | %{Two(/chooseSupport2)}%"
+"  Support %{One(/chooseSupport)}% | %{Two(/chooseSupport2)}%"
 ""
-"  Mage %{One(/chooseMage1)}% | %{Two(/chooseMage2)}%"
+"  Mage %{One(/chooseMage)}% | %{Two(/chooseMage2)}%"
 ""
-"  Seer %{One(/chooseSeer1)}% | %{Two(/chooseSeer2)}%"
+"  Seer %{One(/chooseSeer)}% | %{Two(/chooseSeer2)}%"
 ""
-"Clear spell choices" /clearSpells
+"Clear Spell Choices" /clearSpells
