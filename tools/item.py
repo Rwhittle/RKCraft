@@ -12,7 +12,7 @@ def generate_command(item, name, lore):
 
 
 def usage(name):
-  print("Usage: %s <item type> <name>")
+  print("Usage: %s <item type> <name>" % name)
   print("Generates a command to run in Minecraft to be given an item.")
   print("<item type> is a standard Minecraft identifier, like 'paper'")
   print("or 'minecraft:iron_axe'")
