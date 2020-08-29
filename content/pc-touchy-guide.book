@@ -1,0 +1,76 @@
+: title=OOC Notes; author=Staff
+"      OOC Notes"
+"Table of Contents"
+colorblack "1) Proximity Voice Chat" /:page 2
+colorblack "2) Death" /:page 5
+colorblack "3) Bloodied mechanic" /:page 8
+colorblack "4) Monster Notes" /:page 10
+colorblack "5) Video Settings" /:page 12
+
+"This event uses Proximity Voice Chat, so that you can only hear people who are nearby. The tool is called Minecord."
+"To Set Up Proximity Voice Chat:"
+"1) Click here to get your link code." /minecord link
+: pagebreak
+"2) Send the 4-digit link code to the Vox Craftus bot on the RealmsCraft Discord server."
+"(it might tell you the code both did and didn't work, don't worry)"
+"3) Join the Lobby of Connectedness voice channel on..."
+: pagebreak
+"...the RealmsCraft Discord server."
+"4) Click here to turn Proximity Voice Chat on" /minecord toggle
+"5) To turn this back off, click on step 4 again or leave the voice channel in Discord. That's all!"
+
+: pagebreak
+
+"  Death Mechanics"
+
+"When you die, you leave behind a mottled corpse. Corpses can be healed with spells like Raise Dead, Seed of Life, etc. As usual, be mindful of your party's access to healing!"
+
+:pagebreak
+
+"If a living player walks next to a corpse, it will stand up. To drag a corpse, switch to an empty hotbar slot and right click the body and it will follow you. To stop dragging, right click again and you will drop the body."
+
+:pagebreak
+
+"If you move far enough away from a body you are dragging (by running, jumping, falling, etc.), you will drop it."
+
+: pagebreak
+
+"  Bloodied Mechanic"
+"When you are Bloodied, you will see red particles falling off your body. Healing spells will not work on you."
+"You can remove the Bloodied tag by holding the Shift key (crouching) for 10 seconds"
+: pagebreak
+"(simulating wiping the blood off)."
+"If you attack or take damage while crouching, you will be interrupted."
+"Being bloodied also wears off while dead."
+
+: pagebreak
+
+"Monster Notes"
+"Regenerating monsters are indicated by a red particle effect."
+"During this regeneration, the monster cannot attack, will remain stationary and can even take damage..."
+: pagebreak
+"Raging monsters are also indicated by a red particle effect, but will clearly be moving around and attacking."
+"Raging monsters will still take damage, even if they seem unstoppable..."
+
+: pagebreak
+
+"Video Settings"
+"To open your Video Settings, press 'Esc', click 'Options...', then click 'Video Settings...'"
+"Click the button with the word 'Particles' on it until it says 'Particles: All' or 'Particles: Decreased'."
+: pagebreak
+"If it says 'Particles: Minimal' you won't see important visual cues on the quest."
+"When you're done adjusting video settings, you can get back to the game by pressing 'Esc' twice."
+
+: pagebreak
+
+"If the game feels slow to react to your input when moving around or interacting with chests, buttons, etc., you can adjust some of your Video Settings to improve performance. For good performance and low-ish but not bad video use the following:"
+: pagebreak
+"Graphics: Fast Render Distance: 10 chunks"
+"Smooth Lighting: Off Max Framerate: 60fps"
+"Use VSync: On View Bobbing: Off"
+: pagebreak
+"---- ---- ---- Clouds: Off"
+"---- Particles: Decreased"
+"---- Entity Shadows: Off"
+: pagebreak
+"That said, the clouds are pretty and don't take much extra power to draw in. If your computer can handle it, we recommend turning them on to 'Fancy' for this quest!"

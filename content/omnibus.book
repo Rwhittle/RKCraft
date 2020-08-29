@@ -1,0 +1,126 @@
+: title=RealmsCraft Omnibus; author=Staff; linkcolor=black; doublespaced=False; autobreak=False
+"          Intro"
+
+"This book describes the choices for your character's Class, Equipment, and Spells if applicable. When you are ready to choose, take an Ability Selection book in the Tavern and follow its lead."
+""
+"Click here to see your current build." /showBuild
+
+: pagebreak
+
+$toc "Classes" /:page classes
+""
+"Equipment" /:page equipment
+""
+"Light" /:page light
+""
+"Support Spells" /:page support_spells
+"    Level 1: Healing, Combat Raise Dead" /:page support_1
+"    Level 2: Cry of Life, Seed of Life" /:page support_2
+: pagebreak
+"Mage Spells" /:page mage_spells
+"    Level 1: Magic Missile, Enfeeble Being" /:page mage_1
+"    Level 2: Lightning Bolt, Regeneration" /:page mage_2
+""
+"Seer Spells" /:page seer_spells
+"    Level 1: Guidance, Death Watch" /:page seer_1
+"    Level 2: Divine Aid, Vision" /:page seer_2
+""
+"Intervention" /:page intervention
+
+: pagebreak
+
+$classes "      Classes"
+"The RealmsCraft ability system uses three classes to approximate our normal Realms builds: Fighter, Skirmisher, and Spellcaster."
+""
+"Fighter: Fighters have the best armor and deal the most melee damage. They wield both a sword and an"
+:pagebreak
+"axe, and can use a shield."
+""
+"Skirmisher: Skirmishers wear light armor, and use both spells and weapons. They wield one piece of equipment, a bow, and one set of spells."
+""
+"Spellcaster: Spellcasters wear no armor, and deal the"
+:pagebreak
+"least melee damage. They wield one piece of equipment, two sets of spells (both from the same path or two different ones) and Light."
+
+: pagebreak
+
+$equipment "    Equipment"
+"Sword: Higher speed, lower damage per swing. Hit when the attack bar is full for a sweeping strike. Automatically granted to fighters."
+""
+"Axe: Lower speed, higher damage per swing. Automatically granted to fighters."
+: pagebreak
+"Bow: Infinite and unbreakable, with a high speed. Automatically granted to and only usable by skirmishers."
+""
+"Shield: Mitigate damage. Automatically granted to fighters."
+
+: pagebreak
+
+$light "        Light"
+""
+"Only Spellcaster class characters have this spell. While you have the spell focus in your hand, a torch will appear over your head and follow you as you move. This spell may fail in cramped spaces."
+
+: pagebreak
+
+$support_spells "      Support Spells"
+""
+$support_1 "Level 1"
+""
+"Healing: Use to restore 2 hearts to the player you are looking at. Point at your feet to heal yourself. Infinite use, with cooldown."
+""
+"Combat Raise Dead: Use to instantly"
+: pagebreak
+"revive a corpse you are looking at. 10 uses."
+""
+$support_2 "Level 2"
+""
+"Cry of Life: Use to instantly revive all corpses around you. 1 use."
+""
+"Seed of Life: Use on a corpse to begin a 2 minute regeneration"
+: pagebreak
+"timer. Infinite use, one at a time."
+
+: pagebreak
+
+$mage_spells "      Mage Spells"
+""
+$mage_1 "Level 1"
+""
+"Magic Missile: Throw a ball of magic which explodes on contact. Regain charges on cooldown, up to a max of 3."
+""
+"Enfeeble Being: Use to weaken the nearest enemy you are looking"
+:pagebreak
+"at, making them take more damage. 6 uses."
+""
+$mage_2 "Level 2"
+""
+"Lightning Bolt: Throw a trident which calls down a bolt of lightning wherever it lands, causing splash damage. Infinite use, with cooldown."
+""
+"Regeneration: When"
+: pagebreak
+"you die, your corpse starts regenerating. After you regenerate (or are raised), hold shift for 30 seconds to re-prepare this spell."
+
+: pagebreak
+
+$seer_spells "        Seer Spells"
+""
+$seer_1 "Level 1"
+""
+"Guidance:  Use this item from your hotbar to notify the marshals, who will handle the spell as per the Omnibus."
+""
+"Death Watch: When you die, you retain the ability to see. This is a"
+: pagebreak
+"passive ability and does not add a focus item to your hotbar."
+""
+$seer_2 "Level 2"
+""
+"Divine Aid: Use this item from your hotbar to notify the marshals, who will handle the spell as per the Omnibus."
+""
+"Vision: Use this item"
+: pagebreak
+"from your hotbar to notify the marshals, who will handle the spell as per the Omnibus."
+
+: pagebreak
+
+$intervention "      Intervention"
+
+"Any Spellcaster has the option to replace one of their Level 2 spells with Intervention. It is used like Divine Aid."

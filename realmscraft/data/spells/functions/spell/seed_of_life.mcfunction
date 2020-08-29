@@ -6,7 +6,8 @@
 scoreboard players add @s raycast 1
 
 #check for desired entity
-execute if entity @e[distance=..1,type=zombie,tag=corpse,scores={regenerateTime=0}] run scoreboard players set @s raycast 999999
+#RK Specific: Exclude bloodied corpses
+execute if entity @e[distance=..1,type=zombie,tag=corpse,scores={regenerateTime=0},tag=!bloodied] run scoreboard players set @s raycast 999999
 
 #spell effects
 execute as @s[scores={raycast=1000..}] positioned ^ ^ ^ run tag @e[limit=1,sort=nearest,type=zombie,tag=corpse] add regen

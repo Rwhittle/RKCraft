@@ -8,3 +8,7 @@ scoreboard players set @s[scores={cooldownLB=0},nbt=!{Inventory:[{id:"minecraft:
 #return spell
 clear @s[scores={cooldownLB=1}] minecraft:barrier{display:{Name:"\"Lightning Bolt on Cooldown\""}}
 give @s[scores={cooldownLB=1}] minecraft:trident{display:{Name:"\"Lightning Bolt\"",Lore:["\"Spell Attack\""]},AttributeModifiers:[{Amount:0}]}
+
+# Stop moving focus in inventory from duplicating
+clear @s[nbt={Inventory:[{id:"minecraft:trident"}]}] minecraft:barrier{display:{Name:"\"Lightning Bolt on Cooldown\""}}
+scoreboard players set @s[nbt={Inventory:[{id:"minecraft:trident"}]}] cooldownLB 0
