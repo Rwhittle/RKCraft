@@ -36,7 +36,11 @@ class Book(object):
 
     self.spaces = 7
     self.author = "commandbook.py"
+    self.linkcolor = "blue"
+    self.doublespaced = True
 
+    self.page_links = {}
+    
   def parse_config(self, line):
     if line.strip().startswith("pagebreak"):
       self.new_page()
@@ -51,6 +55,10 @@ class Book(object):
         self.author = value
       elif key == "spacing":
         self.spaces = int(value)
+      elif key == "linkcolor":
+        self.linkcolor = value
+      elif key == "doublespaced":
+        self.doublespaced = False if value.lower() == "false" else True
 
   def preamble(self):
     return r"/give @p written_book"
@@ -74,14 +82,19 @@ class Book(object):
 
 
   def reset_color(self):
-    self.pages[-1] += [{"text": "\\n\\n",
+    self.pages[-1] += [{"text": "\\n\\n" if self.doublespaced else "\\n",
                         "color": "reset"}]
 
   def make_click_event(self, command):
     if command.startswith("/:page"):
+      v = command.split("page")[1].strip()
+      if v.isdigit():
+        v = str(v)
+      else:
+        v = "$" + str(v)
       return {
         "action": "change_page",
-        "value": command.split("page")[1].strip()
+        "value": v
       }
     return {
       "action": "run_command",
@@ -92,9 +105,10 @@ class Book(object):
     if not color:
       color = "black"
     for part in text.split("%"):
+      if not part:
+        continue
       if part[0] == "{":
         visible, cmd = part[1:].split("(")
-        print("cmd: " + cmd)
         self.pages[-1].append({"text": visible,
                                "underlined": True,
                                "color": color,
@@ -108,7 +122,7 @@ class Book(object):
 
   def add_link(self, text, command, color=None):
     if not color:
-      color = "blue"
+      color = self.linkcolor
     self.pages[-1].append({"text": text,
                            "underlined": True,
                            "color": color,
@@ -116,13 +130,18 @@ class Book(object):
     self.reset_color()
     self.links += 1
 
+  def link_page_numbers(self, contents):
+    for link in self.page_links:
+      contents = contents.replace("$" + link, str(self.page_links[link]))
+    return contents
+    
   def generate(self):
     pages = self.pages[:]
     pages[0] = self.make_title() + pages[0]
     data = {
       "title": (self.title,),
       "author": (self.author,),
-      "pages": [(json.dumps(page).replace("'", r"\'"),) for page in self.pages],
+      "pages": [(self.link_page_numbers(json.dumps(page).replace("'", r"\'")),) for page in self.pages],
       "CustomModelData": 1
     }
     return self.preamble() + mc_json(data)
@@ -141,6 +160,8 @@ def commandbook(filename):
         comment, text, command = line.split('"', 2)
 
         color = None
+        if comment.find("$") != -1:
+          book.page_links[comment.split("$")[1].split()[0]] = len(book.pages)
         if comment.startswith("color"):
           color = comment.split(" ")[0].split("color")[1]
         if command.strip():

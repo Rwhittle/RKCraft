@@ -1,6 +1,34 @@
-: title=Ability Book; author=Staff
+: title=Ability Book; author=Staff; linkcolor=black; doublespaced=False
 "          Intro"
 
-"This book is used to select your character's Class, Equipment, and Spells if applicable. If you know what you want to use, just click the link to 'Choose Build' at the end of this section. The rest of this book lists details for all the options if you"
-"want to read up on what's available."
-"Classes
+"This book is used to select your character's Class, Equipment, and Spells if applicable. If you know what you want to use, click %{Choose Build here(/:page choose_build)}%. The %{rest(/:page toc)}% of this book lists details for all the options if you want to read up on what's available."
+
+: pagebreak
+
+$toc "Classes" /:page classes
+"Equipment" /:page 3
+"Basic Spells" /:page 4
+"    Light" /:page 4
+"Support Spells" /:page 5
+"    Level 1: Healing, Combat Raise Dead" /:page 5
+"    Level 2: Cry of Life, Seed of Life" /:page 6
+"Mage Spells" /:page 7
+"    Level 1: Magic Missile, Enfeeble Being" /:page 7
+"    Level 2: Lightning Bolt, Regeneration" /:page 8
+"Seer Spells" /:page 9
+"    Level 1: Guidance, Death Watch" /:page 9
+"    Level 2: Divine Aid, Vision" /:page 10
+
+:pagebreak
+
+$classes "    Classes"
+"The RealmsCraft ability system uses three classes to approximate our normal Realms builds: Fighter, Skirmisher, and Spellcaster."
+"Fighter: Fighters have the best armor and deal the most melee damage. They wield both a sword and an axe, and can use a shield."
+"Skirmisher: Skirmishers wear light armor, and use both spells and weapons. They wield one piece of equipment, a bow, and one set of spells."
+"Spellcaster: Spellcasters wear no armor, and deal the least melee damage. They wield one piece of equipment, two sets of spells (both from the same path or two different ones) and Light."
+"I want to be a..."
+"  %{Fighter(/function beFighter)}% %{Skirmisher(/function beSkirmisher)}% %{Spellcaster(/function beSpellcaster)}%"
+
+: pagebreak
+
+$choose_build "    Choose Build"
