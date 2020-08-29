@@ -8,6 +8,10 @@ tag @s remove Mage2
 tag @s remove Seer
 tag @s remove Seer2
 
+tag @s remove Supported
+tag @s remove Maged
+tag @s remove Seered
+
 tag @s remove light
 tag @s remove magic_missile
 tag @s remove lightning_bolt
