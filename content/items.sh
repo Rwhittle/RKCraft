@@ -32,3 +32,5 @@ item milk_bucket "Rotted ronsa milk" <<EOF
 They say it tastes the same fresh or three months old
 but this might be pushing it.
 EOF
+
+item water_bucket "Stale water"

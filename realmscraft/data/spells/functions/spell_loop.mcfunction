@@ -33,3 +33,6 @@ tag @a remove empower
 tag @e remove enfeeble
 
 scoreboard players set @a raycast 0
+
+#intervention
+execute as @a[scores={click=1..},nbt={SelectedItem:{id:"minecraft:carrot_on_a_stick",tag:{display:{Name:"\"Intervention\""}}}}] run function spells:spell/intervention
