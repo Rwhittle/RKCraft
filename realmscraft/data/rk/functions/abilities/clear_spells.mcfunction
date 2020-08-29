@@ -14,15 +14,16 @@ tag @s remove lightning_bolt
 tag @s remove deathwatch
 tag @s remove regeneration
 
-scoreboard players reset @s cooldownHeal
-scoreboard players reset @s cooldownRA
-scoreboard players reset @s cooldownRD
-scoreboard players reset @s raisedeadcount
-scoreboard players reset @s cooldownSoL
-scoreboard players reset @s MMCount
-scoreboard players reset @s cooldownMMt
-scoreboard players reset @s cooldownEnfeeble
-scoreboard players reset @s cooldownLB
-scoreboard players reset @s cooldownGuidance
-scoreboard players reset @s cooldownRegen
-scoreboard players reset @s spellSets
+scoreboard players set @s cooldownHeal 0
+scoreboard players set @s cooldownRA 0
+scoreboard players set @s cooldownRD 0
+scoreboard players set @s raisedeadcount 0
+scoreboard players set @s cooldownSoL 0
+scoreboard players set @s MMCount 0
+scoreboard players set @s cooldownMMt 0
+scoreboard players set @s cooldownEnfeeble 0
+scoreboard players set @s cooldownLB 0
+scoreboard players set @s cooldownGuidance 0
+scoreboard players set @s cooldownRegen 0
+scoreboard players set @s spellSets 0
+scoreboard players set @s spellSets 0
