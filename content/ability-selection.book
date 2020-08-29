@@ -2,9 +2,11 @@
 
 "    Ability Selection"
 ""
-"This book will let you choose your %{character class(/:page class)}%, %{equipment(/:page equipment)}%, and %{spells(/:page spells)}% (if applicable)."
+"This book will let you choose your %{character class(/:page class)}%, %{equipment(/:page equipment)}%, and %{spells(/:page spells)}%."
 ""
 "If you need to find out what these mean, read the %{RealmsCraft Omnibus(/function rk:quest/gen_omnibus)}% for details."
+""
+"Click here to see your current build." /showBuild
 
 : pagebreak
 
@@ -36,3 +38,4 @@ $spells "      Spells"
 ""
 "  Seer %{One(/chooseSeer1)}% | %{Two(/chooseSeer2)}%"
 ""
+"Clear spell choices" /clearSpells

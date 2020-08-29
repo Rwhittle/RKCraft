@@ -2,6 +2,8 @@
 "          Intro"
 
 "This book describes the choices for your character's Class, Equipment, and Spells if applicable. When you are ready to choose, take an Ability Selection book in the Tavern and follow its lead."
+""
+"Click here to see your current build." /showBuild
 
 : pagebreak
 
