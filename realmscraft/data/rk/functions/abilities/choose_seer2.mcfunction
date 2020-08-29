@@ -1,5 +1,5 @@
 scoreboard players set @s newSpellsLevel 2
-execute as @s run function rk:abilities/wrongSpells
+execute as @s run function rk:abilities/wrong_spells
 
 tag @s[tag=Caster,tag=!Seer,tag=!Seer2,scores={spellSets=..0}] add Seer
 tag @s[tag=Caster,tag=!Seer,tag=!Seer2,scores={spellSets=..0}] add Seer2

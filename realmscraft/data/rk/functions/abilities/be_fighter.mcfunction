@@ -2,9 +2,9 @@ tag @s add Fighter
 tag @s remove Skirmisher
 tag @s remove Caster
 
-execute as @s run function rk:abilities/clearArmor
-execute as @s run function rk:abilities/clearEquipment
-execute as @s run function rk:abilities/clearSpells
+execute as @s run function rk:abilities/clear_armor
+execute as @s run function rk:abilities/clear_equipment
+execute as @s run function rk:abilities/clear_spells
 
 give @s minecraft:chainmail_helmet{Unbreakable:1}
 give @s minecraft:chainmail_chestplate{Unbreakable:1}
