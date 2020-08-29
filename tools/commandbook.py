@@ -77,32 +77,42 @@ class Book(object):
     self.pages[-1] += [{"text": "\\n\\n",
                         "color": "reset"}]
 
+  def make_click_event(self, command):
+    if command.startswith("/:page"):
+      return {
+        "action": "change_page",
+        "value": command.split("page")[1].strip()
+      }
+    return {
+      "action": "run_command",
+      "value": command
+    }
+    
   def add_text(self, text, color=None):
     if not color:
       color = "black"
-    self.pages[-1].append({"text": text,
-                           "underlined": False,
-                           "color": color})
+    for part in text.split("%"):
+      if part[0] == "{":
+        visible, cmd = part[1:].split("(")
+        print("cmd: " + cmd)
+        self.pages[-1].append({"text": visible,
+                               "underlined": True,
+                               "color": color,
+                               "clickEvent": self.make_click_event(cmd[:-2])})
+      else:
+        self.pages[-1].append({"text": part,
+                               "underlined": False,
+                               "color": color})
     self.reset_color()
     self.links += 1
 
   def add_link(self, text, command, color=None):
     if not color:
       color = "blue"
-    if command.startswith("/:page"):
-      click_event = {
-        "action": "change_page",
-        "value": command.split("page")[1].strip()
-      }
-    else:
-      click_event = {
-        "action": "run_command",
-        "value": command
-      }
     self.pages[-1].append({"text": text,
                            "underlined": True,
                            "color": color,
-                           "clickEvent": click_event})
+                           "clickEvent": self.make_click_event(command)})
     self.reset_color()
     self.links += 1
   

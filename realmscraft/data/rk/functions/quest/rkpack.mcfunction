@@ -1,1 +1,1 @@
-usepack rk
+frp:usepack rk
