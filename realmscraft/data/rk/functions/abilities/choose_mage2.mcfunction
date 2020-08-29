@@ -8,7 +8,7 @@ scoreboard players add @s[tag=Caster,tag=!Mage,scores={spellSets=..1}] spellSets
 execute as @s[tag=Mage2,tag=!Maged] run function rcq:give/magespells
 tag @s[tag=Mage2] add Maged
 clear @s minecraft:wither_skeleton_skull{display:{Name:"\"Ward Undead\"",Lore:["\"Spell Focus\""]}}
-give @s[tag=Caster] minecraft:torch{CustomModelData:1,display:{Name:"\"Light\"",Lore:["\"Spell Focus\""]}} 1
+give @s[tag=Caster,tag=!light] minecraft:torch{CustomModelData:1,display:{Name:"\"Light\"",Lore:["\"Spell Focus\""]}} 1
 tag @s[tag=Caster] add light
 
 scoreboard players reset @s newSpellsLevel
