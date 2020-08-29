@@ -7,4 +7,6 @@ scoreboard players add @s[tag=Skirmisher,tag=!Seer,scores={spellSets=..0}] spell
 tag @s[tag=Caster,tag=!Seer,scores={spellSets=..1}] add Seer
 scoreboard players add @s[tag=Caster,tag=!Seer,scores={spellSets=..1}] spellSets 1
 
+execute as @s run function rcq:give/seerspells
+
 scoreboard players reset @s newSpellsLevel
