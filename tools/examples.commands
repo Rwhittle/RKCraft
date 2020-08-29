@@ -1,2 +1,9 @@
 : title=Example Commands; author=Eric; spacing = 2
-"Name and Lore" /give @p paper{display:{Name:'"Named Paper"', Lore:['"There are secrets here"']}}
+"This is text"
+"This is a link" /say hello, world
+"This is text with a %{link(/say on the inside)}%"
+"This links to a page" /:page 2
+"This links to a location" /:page loc
+:pagebreak
+$loc "This is a location"
+
