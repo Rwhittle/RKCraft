@@ -1,0 +1,8 @@
+: title=Ability Selection; author=Staff; linkcolor=black; doublespaced=False; autobreak=False
+
+"I want to be a..."
+"  %{Fighter(/function beFighter)}% %{Skirmisher(/function beSkirmisher)}% %{Spellcaster(/function beSpellcaster)}%"
+
+"I want to use a(n)..."
+"  %{Sword(/function useSword)}% %{Axe(/function useAxe)}%"
+"%{Shield Only(/function useShield)}%"

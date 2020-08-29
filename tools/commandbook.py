@@ -38,7 +38,8 @@ class Book(object):
     self.author = "commandbook.py"
     self.linkcolor = "blue"
     self.doublespaced = True
-
+    self.autobreak = True
+    
     self.page_links = {}
     
   def parse_config(self, line):
@@ -59,6 +60,8 @@ class Book(object):
         self.linkcolor = value
       elif key == "doublespaced":
         self.doublespaced = False if value.lower() == "false" else True
+      elif key == "autobreak":
+        self.autobreak = False if value.lower() == "false" else True
 
   def preamble(self):
     return r"/give @p written_book"
@@ -76,6 +79,8 @@ class Book(object):
     self.links = 0
 
   def maybe_new_page(self):
+    if not self.autobreak:
+      return
     if ((self.page == 0 and self.links == FIRST_PAGE_MAX_LINKS)
         or self.links == LATER_PAGE_MAX_LINKS):
       self.new_page()
