@@ -4,6 +4,8 @@
 colorblack "1) Proximity Voice Chat" /:page 2
 colorblack "2) Death" /:page 5
 colorblack "3) Bloodied mechanic" /:page 8
+colorblack "4) Monster Notes" /:page 10
+colorblack "5) Video Settings" /:page 12
 
 "This event uses Proximity Voice Chat, so that you can only hear people who are nearby. The tool is called Minecord."
 "To Set Up Proximity Voice Chat:"
@@ -40,3 +42,35 @@ colorblack "3) Bloodied mechanic" /:page 8
 "(simulating wiping the blood off)."
 "If you attack or take damage while crouching, you will be interrupted."
 "Being bloodied also wears off while dead."
+
+: pagebreak
+
+"Monster Notes"
+"Regenerating monsters are indicated by a red particle effect."
+"During this regeneration, the monster cannot attack, will remain stationary and can even take damage..."
+: pagebreak
+"Raging monsters are also indicated by a red particle effect, but will clearly be moving around and attacking."
+"Raging monsters will still take damage, even if they seem unstoppable..."
+
+: pagebreak
+
+"Video Settings"
+"To open your Video Settings, press 'Esc', click 'Options...', then click 'Video Settings...'"
+"Click the button with the word 'Particles' on it until it says 'Particles: All' or 'Particles: Decreased'."
+: pagebreak
+"If it says 'Particles: Minimal' you won't see important visual cues on the quest."
+"When you're done adjusting video settings, you can get back to the game by pressing 'Esc' twice."
+
+: pagebreak
+
+"If the game feels slow to react to your input when moving around or interacting with chests, buttons, etc., you can adjust some of your Video Settings to improve performance. For good performance and low-ish but not bad video use the following:"
+: pagebreak
+"Graphics: Fast Render Distance: 10 chunks"
+"Smooth Lighting: Off Max Framerate: 60fps"
+"Use VSync: On View Bobbing: Off"
+: pagebreak
+"---- ---- ---- Clouds: Off"
+"---- Particles: Decreased"
+"---- Entity Shadows: Off"
+: pagebreak
+"That said, the clouds are pretty and don't take much extra power to draw in. If your computer can handle it, we recommend turning them on to 'Fancy' for this quest!"
