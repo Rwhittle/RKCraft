@@ -24,6 +24,8 @@ $toc "Classes" /:page classes
 "Seer Spells" /:page seer_spells
 "    Level 1: Guidance, Death Watch" /:page seer_1
 "    Level 2: Divine Aid, Vision" /:page seer_2
+""
+"Intervention" /:page intervention
 
 : pagebreak
 
@@ -116,3 +118,9 @@ $seer_2 "Level 2"
 "Vision: Use this item"
 : pagebreak
 "from your hotbar to notify the marshals, who will handle the spell as per the Omnibus."
+
+: pagebreak
+
+$intervention "      Intervention"
+
+"Any Spellcaster has the option to replace one of their Level 2 spells with Intervention. It is used like Divine Aid."

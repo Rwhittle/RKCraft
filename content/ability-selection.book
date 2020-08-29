@@ -43,3 +43,15 @@ $spells "      Spells"
 "  Seer %{One(/function rk:abilities/choose_seer)}% | %{Two(/function rk:abilities/choose_seer2)}%"
 ""
 "Clear Spell Choices" /function rk:abilities/clear_spells
+""
+"Intervention options on next page..."
+: pagebreak
+
+"If you have Level Two of a Path, you may replace one of those spells with Intervention."
+
+Replace:
+"%{Cry of Life(/function rk:abilities/cry_for_intervention)}%  %{Seed of Life(/function rk:abilities/seed_for_intervention)}%"
+""
+"%{Lightning Bolt(/function rk:abilities/bolt_for_intervention)}%  %{Regeneration(/function rk:abilities/regen_for_intervention)}%"
+""
+"%{Divine Aids(/function rk:abilities/divineaid_for_intervention)}%  %{Vision(/function rk:abilities/vision_for_intervention)}%"
