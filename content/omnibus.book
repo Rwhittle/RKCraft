@@ -116,7 +116,3 @@ $seer_2 "Level 2"
 "Vision: Use this item"
 : pagebreak
 "from your hotbar to notify the marshals, who will handle the spell as per the Omnibus."
-
-: pagebreak
-
-$choose_build "    Choose Build"
