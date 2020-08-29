@@ -4,7 +4,7 @@ scoreboard players set OverworldState value 0
 scoreboard players set TentaclesRemaining value 6
 scoreboard players set RespawnCooldown value 600
 #max number of players who can enter the mind realm in tentacle phase
-scoreboard players set MaxMindPlayers value 3
+scoreboard players set MaxMindPlayers value 5
 scoreboard players set MaxMindPlayersPlusOne value 4
 scoreboard players set MindPlayers value 0
 #Boss attack timer and cooldown (in ticks)
