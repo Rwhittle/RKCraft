@@ -6,25 +6,25 @@
 ""
 "If you need to find out what these mean, read the %{RealmsCraft Omnibus(/function rk:quest/gen_omnibus)}% for details."
 ""
-"Click here to see your current build." /showBuild
+"Click here to see your current build." /show_build
 
 : pagebreak
 
 $class "    Class"
 ""
 "I want to be a..."
-"  Fighter" /function beFighter
-"  Skirmisher" /function beSkirmisher
-"  Spellcaster" /function beSpellcaster
+"  Fighter" /function be_fighter
+"  Skirmisher" /function be_skirmisher
+"  Spellcaster" /function be_spellcaster
 
 : pagebreak
 
 $equipment "    Equipment"
 ""
 "I want to have a(n)..."
-"  Sword" /function chooseSword
-"  Axe"  /function chooseAxe
-"  Shield Only" /function chooseShield
+"  Sword" /function choose_sword
+"  Axe"  /function choose_axe
+"  Shield Only" /function choose_shield
 
 : pagebreak
 
@@ -36,10 +36,10 @@ $spells "      Spells"
 : pagebreak
 "I want to learn..."
 ""
-"  Support %{One(/chooseSupport)}% | %{Two(/chooseSupport2)}%"
+"  Support %{One(/choose_support)}% | %{Two(/choose_support2)}%"
 ""
-"  Mage %{One(/chooseMage)}% | %{Two(/chooseMage2)}%"
+"  Mage %{One(/choose_mage)}% | %{Two(/choose_mage2)}%"
 ""
-"  Seer %{One(/chooseSeer)}% | %{Two(/chooseSeer2)}%"
+"  Seer %{One(/choose_seer)}% | %{Two(/choose_seer2)}%"
 ""
-"Clear Spell Choices" /clearSpells
+"Clear Spell Choices" /clear_spells
