@@ -39,6 +39,8 @@ class Book(object):
     self.linkcolor = "blue"
     self.doublespaced = True
     self.autobreak = True
+
+    self.tags = []
     
     self.page_links = {}
     
@@ -62,6 +64,8 @@ class Book(object):
         self.doublespaced = False if value.lower() == "false" else True
       elif key == "autobreak":
         self.autobreak = False if value.lower() == "false" else True
+      elif key == "tags":
+        self.tags = [s.strip() for s in value.split(",")]
 
   def preamble(self):
     return r"/give @p written_book"
@@ -147,7 +151,8 @@ class Book(object):
       "title": (self.title,),
       "author": (self.author,),
       "pages": [(self.link_page_numbers(json.dumps(page).replace("'", r"\'")),) for page in self.pages],
-      "CustomModelData": 1
+      "CustomModelData": 1,
+      "Tags": [(tag,) for tag in self.tags]
     }
     return self.preamble() + mc_json(data)
 
