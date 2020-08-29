@@ -1,8 +1,9 @@
-: title=Marshal Commands v1.3; author=Aaron; spacing = 2
+: title=Marshal Commands v1.4; author=Aaron; spacing = 2
 "General Marshal Commands"
 "Toggle On Marshal Mode" /function rk:quest/marshal_mode
 "Teleport PCs to me" /teleport @a[gamemode=adventure] @s
 "Teleport PCs to tavern" /teleport @a[gamemode=adventure] @e[type=armor_stand,limit=1,name=Tavern]
+"Revive Closest PC" /execute as @e[tag=corpse,limit=1,sort=nearest] run function spells:func/revive
 : pagebreak
 "Tavern Barrier On" /function rk:quest/tavern_barrier_on
 "Tavern Barrier Off" /function rk:quest/tavern_barrier_off

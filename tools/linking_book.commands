@@ -1,0 +1,60 @@
+: title=Linking Book v1.1; author=Aaron; spacing = 2
+"Realms"
+"Tavern" /tp @s @e[type=armor_stand,limit=1,name=Tavern]
+"Staff Room" /tp @s @e[type=armor_stand,limit=1,name=Staff]
+"Portal: Realms Side" /tp @s @e[type=armor_stand,limit=1,name=PortalRealms]
+: pagebreak
+
+"Desert"
+"Caravan Camp" /tp @s @e[type=armor_stand,limit=1,name=Caravan]
+"Mess Hall Flag" /tp @s @e[type=armor_stand,limit=1,name=Flag]
+: pagebreak
+
+"Surface Outpost"
+"Stone Gate" /tp @s @e[type=armor_stand,limit=1,name=StoneGate]
+"East Gate" /tp @s @e[type=armor_stand,limit=1,name=EastGate]
+"West Gate" /tp @s @e[type=armor_stand,limit=1,name=WestGate]
+"South Gate" /tp @s @e[type=armor_stand,limit=1,name=SouthGate]
+: pagebreak
+"Mess Hall Attic" /tp @s @e[type=armor_stand,limit=1,name=Attic]
+"BBQ" /tp @s @e[type=armor_stand,limit=1,name=BBQ]
+"Butcher" /tp @s @e[type=armor_stand,limit=1,name=Butcher]
+"Smithy" /tp @s @e[type=armor_stand,limit=1,name=Smithy]
+"Armory" /tp @s @e[type=armor_stand,limit=1,name=Armory]
+: pagebreak
+"Stables" /tp @s @e[type=armor_stand,limit=1,name=Stables]
+"Livestock" /tp @s @e[type=armor_stand,limit=1,name=Livestock]
+"Crops" /tp @s @e[type=armor_stand,limit=1,name=Crops]
+"Mill" /tp @s @e[type=armor_stand,limit=1,name=Mill]
+"Dock" /tp @s @e[type=armor_stand,limit=1,name=Dock]
+: pagebreak
+
+"Underground"
+"Grand Stairs" /tp @s @e[type=armor_stand,limit=1,name=GrandStairs]
+"Tunnel Stairs" /tp @s @e[type=armor_stand,limit=1,name=TunnelStair]
+"School" /tp @s @e[type=armor_stand,limit=1,name=School]
+"Barracks" /tp @s @e[type=armor_stand,limit=1,name=Barracks]
+: pagebreak
+"Chapel" /tp @s @e[type=armor_stand,limit=1,name=Chapel]
+"Situation Room" /tp @s @e[type=armor_stand,limit=1,name=SituationRoom]
+"Ritual" /tp @s @e[type=armor_stand,limit=1,name=Ritual]
+"Infirmary" /tp @s @e[type=armor_stand,limit=1,name=Infirmary]
+: pagebreak
+"Burial" /tp @s @e[type=armor_stand,limit=1,name=Burial]
+"Bottom of Well" /tp @s @e[type=armor_stand,limit=1,name=WellBottom]
+"Lumber Mill" /tp @s @e[type=armor_stand,limit=1,name=Lumber]
+: pagebreak
+"Color Puzzle" /tp @s @e[type=armor_stand,limit=1,name=ColorPuzzle]
+"Dance Puzzle" /tp @s @e[type=armor_stand,limit=1,name=Dance]
+"Boss Room" /tp @s @e[type=armor_stand,limit=1,name=BossRoom]
+"Boss Dream" /tp @s @e[type=armor_stand,limit=1,name=BossDream]
+: pagebreak
+
+"Marshal Only"
+"Jack's Portal Spot" /tp @s @e[type=armor_stand,limit=1,name=JackSpot]
+"Outside Portal" /tp @s @e[type=armor_stand,limit=1,name=OutsidePortal]
+: pagebreak
+"Command Platform" /tp @s @e[type=armor_stand,limit=1,name=CommandPlatform]
+"Portal Switch" /tp @s @e[type=armor_stand,limit=1,name=PortalSwitch]
+"Unburied Outpost" /tp @s @e[type=armor_stand,limit=1,name=Unburied]
+"Back Stage" /tp @s @e[type=armor_stand,limit=1,name=BackStage]

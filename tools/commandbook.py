@@ -17,7 +17,7 @@ import sys
 from util import mc_json
 
 
-FIRST_PAGE_MAX_LINKS = 5
+FIRST_PAGE_MAX_LINKS = 6
 LATER_PAGE_MAX_LINKS = 6
 
 
@@ -72,7 +72,7 @@ class Book(object):
         or self.links == LATER_PAGE_MAX_LINKS):
       self.new_page()
 
-    
+
   def reset_color(self):
     self.pages[-1] += [{"text": "\\n\\n",
                         "color": "reset"}]
@@ -115,7 +115,7 @@ class Book(object):
                            "clickEvent": self.make_click_event(command)})
     self.reset_color()
     self.links += 1
-  
+
   def generate(self):
     pages = self.pages[:]
     pages[0] = self.make_title() + pages[0]

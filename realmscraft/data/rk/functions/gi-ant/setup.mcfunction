@@ -20,3 +20,5 @@ scoreboard objectives add mobDeathTrigger dummy
 
 #Setup for each mob
 function rk:gi-ant/wolf/setup
+function rk:gi-ant/bear/setup
+function rk:gi-ant/spider/setup
