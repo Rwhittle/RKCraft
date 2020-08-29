@@ -6,25 +6,25 @@
 ""
 "If you need to find out what these mean, read the %{RealmsCraft Omnibus(/function rk:quest/gen_omnibus)}% for details."
 ""
-"Click here to see your current build." /show_build
+"Click here to see your current build." /function rk:abilities/show_build
 
 : pagebreak
 
 $class "    Class"
 ""
 "I want to be a..."
-"  Fighter" /function be_fighter
-"  Skirmisher" /function be_skirmisher
-"  Spellcaster" /function be_spellcaster
+"  Fighter" /function rk:abilities/be_fighter
+"  Skirmisher" /function rk:abilities/be_skirmisher
+"  Spellcaster" /function rk:abilities/be_caster
 
 : pagebreak
 
 $equipment "    Equipment"
 ""
 "I want to have a(n)..."
-"  Sword" /function choose_sword
-"  Axe"  /function choose_axe
-"  Shield Only" /function choose_shield
+"  Sword" /function rk:abilities/choose_sword
+"  Axe"  /function rk:abilities/choose_axe
+"  Shield Only" /function rk:abilities/choose_shield
 
 : pagebreak
 
@@ -36,10 +36,10 @@ $spells "      Spells"
 : pagebreak
 "I want to learn..."
 ""
-"  Support %{One(/choose_support)}% | %{Two(/choose_support2)}%"
+"  Support %{One(/function rk:abilities/choose_support)}% | %{Two(/function rk:abilities/choose_support2)}%"
 ""
-"  Mage %{One(/choose_mage)}% | %{Two(/choose_mage2)}%"
+"  Mage %{One(/function rk:abilities/choose_mage)}% | %{Two(/function rk:abilities/choose_mage2)}%"
 ""
-"  Seer %{One(/choose_seer)}% | %{Two(/choose_seer2)}%"
+"  Seer %{One(/function rk:abilities/choose_seer)}% | %{Two(/function rk:abilities/choose_seer2)}%"
 ""
-"Clear Spell Choices" /clear_spells
+"Clear Spell Choices" /function rk:abilities/clear_spells
