@@ -5,9 +5,9 @@ This is a whole [i]long[/i] book.
 
 Some of the lines [u]are separated,
 Others are [b]cl[/u]ose[/b] together.
-[pb]
+[p] these are page breaks, and words after them on the line are ignored
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce scelerisque nisi non eros lacinia mollis. Phasellus nec libero neque. Nam ut ante eu leo laoreet varius. Vestibulum eu sagittis felis, quis varius lorem. Vestibulum efficitur odio ac nisl venenatis lacinia. Vestibulum vestibulum
-[pb]
+[p]
 felis id eros egestas pharetra. Morbi quis vestibulum quam. Cras nec mattis risus, a pellentesque metus. Donec et diam porta, vestibulum dolor sit amet, rhoncus turpis. Nunc orci libero, sagittis eget ultricies eu, finibus nec justo. Praesent fermentum ligula eget tempus elementum. Aenean
-[pb]
+[p]
 congue ipsum ut lectus faucibus, eu vestibulum tellus venenatis. Nulla diam mi, rhoncus sed pretium in, eleifend eu eros. Proin eleifend arcu mi, in blandit augue viverra non. Aenean vel euismod magna. Nunc id dictum nunc, ut iaculis ligula.

@@ -27,7 +27,7 @@ class Book(object):
 
   class Style(object):
     bold = False
-    italics = False
+    italic = False
     underlined = False
     color = None
 
@@ -36,7 +36,7 @@ class Book(object):
 
     def __str__(self):
       return json.dumps({"bold": self.bold,
-                         "italics": self.italics,
+                         "italic": self.italic,
                          "underlined": self.underlined})
     
   def __init__(self, title):
@@ -49,7 +49,7 @@ class Book(object):
 
     self.modifiers = {
       "[b]": "bold",
-      "[i]": "italics",
+      "[i]": "italic",
       "[u]": "underlined"
     }
     self.style = Book.Style()
@@ -81,7 +81,7 @@ class Book(object):
   def add_text(self, text, style):
     self.pages[-1].append({"text": text.replace("\n", "\\n"),
                            "bold": style.bold,
-                           "italics": style.italics,
+                           "italic": style.italic,
                            "underlined": style.underlined,
                            "color": style.get_color()})
 
@@ -123,7 +123,7 @@ class Book(object):
     data = {
       "title": (self.title,),
       "author": (self.author,),
-      "pages": [(json.dumps(page).replace("'", r"\'"),) for page in self.pages],
+      "pages": [(json.dumps(page).replace("'", r"\'").replace(r'\"', r'\\"'),) for page in self.pages],
       "Tags": [(tag,) for tag in self.tags]
     }
     return self.preamble() + mc_json(data)
@@ -137,7 +137,7 @@ def commandbook(filename):
       if line.startswith(":"):
         book.parse_config(line[1:])
         continue
-      elif line.startswith("[pb]"):
+      elif line.startswith("[p]"):
         book.new_page()
       else:
         book.add_line(line)
