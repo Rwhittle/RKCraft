@@ -6,7 +6,7 @@ function item () {
     $ITEM "$1" "$2" < /dev/null
 }
 
-#item brown_carpet "Rotted cloth"
+item brown_carpet "Rotted cloth"
 
 item spruce_slab "Wooden divider"
 
