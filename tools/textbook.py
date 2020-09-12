@@ -27,6 +27,7 @@ class Book(object):
 
   class Style(object):
     bold = False
+    italics = False
     underlined = False
     color = None
 
@@ -35,6 +36,7 @@ class Book(object):
 
     def __str__(self):
       return json.dumps({"bold": self.bold,
+                         "italics": self.italics,
                          "underlined": self.underlined})
     
   def __init__(self, title):
@@ -47,6 +49,7 @@ class Book(object):
 
     self.modifiers = {
       "[b]": "bold",
+      "[i]": "italics",
       "[u]": "underlined"
     }
     self.style = Book.Style()
@@ -78,6 +81,7 @@ class Book(object):
   def add_text(self, text, style):
     self.pages[-1].append({"text": text.replace("\n", "\\n"),
                            "bold": style.bold,
+                           "italics": style.italics,
                            "underlined": style.underlined,
                            "color": style.get_color()})
 

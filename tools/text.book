@@ -1,7 +1,7 @@
 : title=Hello, world; author=Eric
       [u]Hello, world[/u]
 
-This is a whole long book.
+This is a whole [i]long[/i] book.
 
 Some of the lines [u]are separated,
 Others are [b]cl[/u]ose[/b] together.
